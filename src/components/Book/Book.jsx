@@ -7,7 +7,11 @@ const Book = ({ book }) => {
           <img src={image} alt="Book" className="rounded-xl h-[166px] " />
         </figure>
         <div className="card-body items-center text-center">
-          <button className="btn btn-sm">Small</button>
+          <div>
+            {tags.map((tag) => (
+              <button className="btn btn-sm">{tag}</button>
+            ))}
+          </div>
           <h2 className="card-title">{bookName}</h2>
           <p>{author}</p>
         </div>
