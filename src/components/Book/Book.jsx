@@ -2,7 +2,6 @@ const Book = ({ book }) => {
   const { image, bookName, author, rating, category, tags } = book;
   return (
     <div>
-      <h2>books</h2>
       <div className="card bg-base-100 w-96 shadow-sm">
         <figure className="px-10 pt-10">
           <img src={image} alt="Shoes" className="rounded-xl" />
