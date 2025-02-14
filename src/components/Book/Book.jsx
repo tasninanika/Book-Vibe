@@ -7,7 +7,7 @@ const Book = ({ book }) => {
           <img src={image} alt="Book" className="rounded-xl h-[166px] " />
         </figure>
         <div className="card-body items-center text-center">
-          <div>
+          <div className="flex justify-center gap-4">
             {tags.map((tag) => (
               <button className="btn btn-sm">{tag}</button>
             ))}
