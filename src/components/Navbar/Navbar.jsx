@@ -1,4 +1,17 @@
 const Navbar = () => {
+  const links = (
+    <>
+      <li className="text-lg font-semibold">
+        <a>Home</a>
+      </li>
+      <li className="text-lg font-semibold">
+        <a href="">Listed Books</a>
+      </li>
+      <li className="text-lg font-semibold">
+        <a href="">Pages to Read</a>
+      </li>
+    </>
+  );
   return (
     <div>
       <div className="navbar bg-base-100 shadow-sm">
@@ -25,35 +38,21 @@ const Navbar = () => {
               tabIndex={0}
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
             >
-              <li>
-                <a href="">Home</a>
-              </li>
-              <li>
-                <a>Listed Books</a>
-              </li>
-              <li>
-                <a>Pages to Read</a>
-              </li>
+              {links}
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">Book Vibe</a>
+          <a className="btn btn-ghost text-3xl font-bold">Book Vibe</a>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
-            <li>
-              <a>Home</a>
-            </li>
-            <li>
-              <a href="">Listed Books</a>
-            </li>
-            <li>
-              <a href="">Pages to Read</a>
-            </li>
-          </ul>
+          <ul className="menu menu-horizontal px-1">{links}</ul>
         </div>
-        <div className="navbar-end">
-          <a className="btn">Button</a>
-          <a className="btn">Button</a>
+        <div className="navbar-end gap-2">
+          <a className="btn bg-[#23BE0A] text-white rounded-lg font-semibold">
+            Sign In
+          </a>
+          <a className="btn bg-[#59C6D2] text-white rounded-lg font-semibold">
+            Sign Up
+          </a>
         </div>
       </div>
     </div>
