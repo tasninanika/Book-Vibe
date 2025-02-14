@@ -12,6 +12,7 @@ const Books = () => {
     <div>
       <div>
         <h2 className="text-5xl">Books</h2>
+        <p>{books.length}</p>
       </div>
     </div>
   );
