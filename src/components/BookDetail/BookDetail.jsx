@@ -28,7 +28,10 @@ const BookDetail = () => {
             />
           </div>
           <div className="flex-1">
-            <h1 className="text-5xl font-bold">Box Office News!</h1>
+            <h2 className="text-5xl font-bold">{bookName}</h2>
+            <p className="text-[20px] border-gray-200 border-b">
+              By : {author}
+            </p>
             <p className="py-6">
               Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
               excepturi exercitationem quasi. In deleniti eaque aut repudiandae
