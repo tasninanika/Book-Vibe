@@ -17,6 +17,7 @@ const BookDetail = () => {
     yearOfPublishing,
     review,
   } = book;
+  const handleMarkAsRead = () => {};
   return (
     <div>
       <div className="hero min-h-screen my-30">
@@ -71,7 +72,9 @@ const BookDetail = () => {
               </p>
             </div>
             <div className="flex gap-4 mt-4 flex-grow">
-              <button className="btn btn-outline">Read</button>
+              <button className="btn btn-outline" onClick={handleMarkAsRead}>
+                Read
+              </button>
               <button className="btn bg-red-400 text-white">Wishlist</button>
             </div>
           </div>
