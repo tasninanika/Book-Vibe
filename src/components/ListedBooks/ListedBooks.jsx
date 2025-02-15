@@ -10,6 +10,9 @@ const ListedBooks = () => {
   useEffect(() => {
     const storedReadList = getStoredReadList();
     const storedReadListInt = storedReadList.map((id) => parseInt(id));
+    const readBookList = allBooks.filter((book) =>
+      storedReadListInt.includes(book.bookId)
+    );
   }, []);
 
   return (
