@@ -19,7 +19,7 @@ const BookDetail = () => {
   } = book;
   return (
     <div>
-      <div className="hero min-h-screen my-20">
+      <div className="hero min-h-screen my-30">
         <div className="hero-content flex-col lg:flex-row gap-10">
           <div className="bg-base-300 w-[573px] h-[680px] rounded-xl flex items-center justify-center">
             <img
@@ -35,7 +35,9 @@ const BookDetail = () => {
               <p className="text-[20px] border-gray-200 border-b py-4">
                 By : {author}
               </p>
-              <p className="py-4 border-gray-200 border-b">{category}</p>
+              <p className="py-4 border-gray-200 border-b text-[20px]">
+                {category}
+              </p>
               <p className="py-4 text-gray-600">
                 <span className="font-bold text-black">Review :</span> {review}
               </p>
@@ -44,7 +46,7 @@ const BookDetail = () => {
                 {tags.map((tag, index) => (
                   <button
                     key={index}
-                    className="btn btn-sm rounded-full px-6 border-none bg-green-50 mr-4 text-[#23BE0A] text-lg"
+                    className="btn btn-sm rounded-full px-6 border-none bg-green-50 mr-4 text-[#23BE0A]"
                   >
                     #{tag}
                   </button>
