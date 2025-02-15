@@ -21,4 +21,4 @@ const addToStoredReadList = (id) =>{
     }
 };
 
-export {addToStoredReadList};
+export {addToStoredReadList, getStoredReadList};
