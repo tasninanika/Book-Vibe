@@ -49,10 +49,10 @@ const Navbar = () => {
           <ul className="menu menu-horizontal px-1">{links}</ul>
         </div>
         <div className="navbar-end gap-2">
-          <a className="btn bg-[#23BE0A] text-white rounded-lg font-semibold">
+          <a className="btn bg-green-400 text-white rounded-lg font-semibold">
             Sign In
           </a>
-          <a className="btn bg-[#59C6D2] text-white rounded-lg font-semibold">
+          <a className="btn bg-red-400 text-white rounded-lg font-semibold">
             Sign Up
           </a>
         </div>
