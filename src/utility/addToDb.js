@@ -13,5 +13,7 @@ const addToStoredReadList = (id) =>{
     }
     else{
         storedList.push(id);
+        const storedListStr = JSON.stringify(storedList);
+        localStorage.setItem('read-list', storedListStr);
     }
 }
