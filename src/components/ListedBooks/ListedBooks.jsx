@@ -1,10 +1,11 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import { getStoredReadList } from "../../utility/addToDb";
 
 const ListedBooks = () => {
+  const [readList, setReadList] = useState([]);
   const allBooks = useLoaderData();
 
   useEffect(() => {
@@ -13,6 +14,7 @@ const ListedBooks = () => {
     const readBookList = allBooks.filter((book) =>
       storedReadListInt.includes(book.bookId)
     );
+    setReadList(readBookList);
   }, []);
 
   return (
