@@ -3,13 +3,13 @@ import { NavLink } from "react-router-dom";
 const Navbar = () => {
   const links = (
     <>
-      <li className="text-lg font-semibold">
+      <li className="text-lg text-[#131313CC]">
         <NavLink to="/">Home</NavLink>
       </li>
-      <li className="text-lg font-semibold">
+      <li className="text-lg text-[#131313CC]">
         <NavLink to="">Listed Books</NavLink>
       </li>
-      <li className="text-lg font-semibold">
+      <li className="text-lg text-[#131313CC]">
         <NavLink to="">Pages to Read</NavLink>
       </li>
     </>
