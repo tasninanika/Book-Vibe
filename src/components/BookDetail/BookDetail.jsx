@@ -27,16 +27,26 @@ const BookDetail = () => {
               className="max-w-sm rounded-lg mx-auto w-[425px] h-[564px] p-10"
             />
           </div>
-          <div className="flex-1">
+          <div className="flex-1 mx-auto">
             <h2 className="text-5xl font-bold">{bookName}</h2>
-            <p className="text-[20px] border-gray-200 border-b">
+            <p className="text-[20px] border-gray-200 border-b py-4">
               By : {author}
             </p>
-            <p className="py-6">
-              Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-              excepturi exercitationem quasi. In deleniti eaque aut repudiandae
-              et a id nisi.
-            </p>
+            <p className="py-4 border-gray-200 border-b">{category}</p>
+            <p className="py-4">{review}</p>
+            <div className="flex gap-4 mt-4 ml-6">
+              <p>
+                <span className="pr-3">Tag</span>
+                {tags.map((tag, index) => (
+                  <button
+                    key={index}
+                    className="btn btn-sm rounded-full px-6 border-none bg-green-50 text-[#23BE0A]"
+                  >
+                    {tag}
+                  </button>
+                ))}
+              </p>
+            </div>
             <button className="btn btn-primary">Get Started</button>
           </div>
         </div>
