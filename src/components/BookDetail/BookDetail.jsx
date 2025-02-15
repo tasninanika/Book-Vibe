@@ -29,7 +29,6 @@ const BookDetail = () => {
               className="w-[425px] h-[564px] rounded-lg object-contain"
             />
           </div>
-
           <div className="flex-1 mx-auto">
             <div className="flex flex-col">
               <h2 className="text-5xl font-bold">{bookName}</h2>
