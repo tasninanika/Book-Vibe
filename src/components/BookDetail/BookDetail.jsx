@@ -5,7 +5,19 @@ const BookDetail = () => {
   const id = parseInt(bookId);
   const data = useLoaderData();
   const book = data.find((book) => book.bookId === id);
-  const { bookId, image, bookName, author, rating, category, tags } = book;
+  const {
+    bookId,
+    image,
+    bookName,
+    author,
+    rating,
+    category,
+    tags,
+    totalPages,
+    publisher,
+    yearOfPublishing,
+    review,
+  } = book;
   return (
     <div>
       <h2>Book detail</h2>
