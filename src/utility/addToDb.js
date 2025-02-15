@@ -4,7 +4,10 @@ const getStoredReadList = () =>{
         const storedList = JSON.parse(storedListStr);
         return storedList;
     }
-}
+    else{
+        return [];
+    }
+};
 
 const addToStoredReadList = (id) =>{
     const storedList = getStoredReadList();
@@ -16,6 +19,6 @@ const addToStoredReadList = (id) =>{
         const storedListStr = JSON.stringify(storedList);
         localStorage.setItem('read-list', storedListStr);
     }
-}
+};
 
 export {addToStoredReadList};
