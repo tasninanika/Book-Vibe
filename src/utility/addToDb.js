@@ -17,3 +17,5 @@ const addToStoredReadList = (id) =>{
         localStorage.setItem('read-list', storedListStr);
     }
 }
+
+export {addToStoredReadList};
