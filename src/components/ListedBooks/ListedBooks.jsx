@@ -46,6 +46,21 @@ const ListedBooks = () => {
       setReadList(sortedReadList);
     }
   };
+  const handleWishListSort = (sortType) => {
+    setSort(sortType);
+
+    //
+    if (sortType === "No of pages") {
+      const sortedWishList = [...wishList].sort(
+        (a, b) => a.totalPages - b.totalPages
+      );
+      setReadList(sortedWishList);
+    }
+    if (sortType === "Ratings") {
+      const sortedWishList = [...wishList].sort((a, b) => b.rating - a.rating);
+      setReadList(sortedWishList);
+    }
+  };
 
   return (
     <div className="mb-24">
@@ -65,10 +80,18 @@ const ListedBooks = () => {
             tabIndex={0}
             className="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm"
           >
-            <li onClick={() => handleSort("Ratings")}>
+            <li
+              onClick={() => {
+                handleSort("Ratings"), handleWishListSort("Ratings");
+              }}
+            >
               <a>Rating</a>
             </li>
-            <li onClick={() => handleSort("No of pages")}>
+            <li
+              onClick={() => {
+                handleSort("No of pages"), handleWishListSort("No of pages");
+              }}
+            >
               <a>Number of pages</a>
             </li>
           </ul>
