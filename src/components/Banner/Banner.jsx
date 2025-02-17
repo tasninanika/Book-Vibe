@@ -8,9 +8,9 @@ const Banner = () => {
             <img src={bannerImg} className="max-w-sm rounded-lg" />
           </div>
           <div className="w-[526px] h-[168px]">
-            <h1 className="text-[56px] font-bold">
+            <h2 className="text-[56px] font-bold">
               Books to freshen up your bookshelf
-            </h1>
+            </h2>
             <button className="btn text-lg font-bold py-6 px-6 rounded-md bg-green-400 mt-10 text-white">
               View The List
             </button>

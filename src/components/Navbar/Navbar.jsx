@@ -6,7 +6,7 @@ const Navbar = () => {
       <li className="text-lg text-[#131313CC]">
         <NavLink to="/">Home</NavLink>
       </li>
-      <li className="text-lg text-[#131313CC]">
+      <li className="text-lg text-[#131313CC] font-poppins">
         <NavLink to="/listedBooks">Listed Books</NavLink>
       </li>
       <li className="text-lg text-[#131313CC]">
