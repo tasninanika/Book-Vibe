@@ -3,10 +3,13 @@ import { useLoaderData } from "react-router-dom";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import { getStoredReadList } from "../../utility/addToDb";
+import { getStoredWishList } from "../../utility/addToWishlist";
 import ReadBooks from "../ReadBooks/ReadBooks";
+import WishlistBooks from "../WishlistBooks/WishlistBooks";
 
 const ListedBooks = () => {
   const [readList, setReadList] = useState([]);
+  const [wishList, setWishList] = useState([]);
   const [sort, setSort] = useState("");
   const allBooks = useLoaderData();
 
@@ -17,6 +20,14 @@ const ListedBooks = () => {
       storedReadListInt.includes(book.bookId)
     );
     setReadList(readBookList);
+  }, [allBooks]);
+  useEffect(() => {
+    const storedWishList = getStoredWishList();
+    const storedWishListInt = storedWishList.map((id) => parseInt(id));
+    const wishBookList = allBooks.filter((book) =>
+      storedWishListInt.includes(book.bookId)
+    );
+    setWishList(wishBookList);
   }, [allBooks]);
 
   const handleSort = (sortType) => {
@@ -74,7 +85,9 @@ const ListedBooks = () => {
           ))}
         </TabPanel>
         <TabPanel>
-          <h2>Any content 2</h2>
+          {wishList.map((book) => (
+            <WishlistBooks key={book.bookId} book={book}></WishlistBooks>
+          ))}{" "}
         </TabPanel>
       </Tabs>
     </div>
