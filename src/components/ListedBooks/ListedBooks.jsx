@@ -3,9 +3,9 @@ import { useLoaderData } from "react-router-dom";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import { getStoredReadList } from "../../utility/addToDb";
-import { getStoredWishList } from "../../utility/addToWishlist";
 import ReadBooks from "../ReadBooks/ReadBooks";
 import WishlistBooks from "../WishlistBooks/WishlistBooks";
+import { getStoredWishList } from "../../utility/addToWishlist";
 
 const ListedBooks = () => {
   const [readList, setReadList] = useState([]);
