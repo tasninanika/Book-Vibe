@@ -7,6 +7,7 @@ import Book from "../Book/Book";
 
 const ListedBooks = () => {
   const [readList, setReadList] = useState([]);
+  const [sort, setSort] = useState("");
   const allBooks = useLoaderData();
 
   useEffect(() => {
@@ -18,12 +19,16 @@ const ListedBooks = () => {
     setReadList(readBookList);
   }, [allBooks]);
 
+  const handleSort = (sortType) => {
+    setSort(sortType);
+  };
+
   return (
     <div>
       <h2>Listed Books</h2>
       <div className="dropdown dropdown-center">
         <div tabIndex={0} role="button" className="btn m-1">
-          Sort By ⬇
+          {sort ? { sort } : "Sort By ⬇"}
         </div>
         <ul
           tabIndex={0}
