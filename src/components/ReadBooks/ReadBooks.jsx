@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+import { CiLocationOn } from "react-icons/ci";
 
 const ReadBooks = ({ book }) => {
   const {
@@ -21,32 +22,48 @@ const ReadBooks = ({ book }) => {
           <img src={image} alt="Movie" className="w-[130px] h-[180px]" />
         </figure>
         <div className="card-body">
-          <h2 className="text-5xl font-bold">{bookName}</h2>
-          <p className="text-[20px] border-gray-200 border-b py-4">
-            By : {author}
-          </p>
-          <p className="pb-4 border-gray-200 border-b">
-            <span className="pr-5 font-bold">Tag</span>
-            {tags.map((tag, index) => (
-              <button
-                key={index}
-                className="btn btn-sm rounded-full px-6 border-none bg-green-50 mr-4 text-[#23BE0A]"
-              >
-                #{tag}
-              </button>
-            ))}
-          </p>
-          <p className="pb-2 pt-4 text-gray-600">
-            <span className="font-bold text-black">Number of Pages:</span>{" "}
-            {totalPages}
-          </p>
-          <p className="py-2 text-gray-600">
-            <span className="font-bold text-black">Publisher:</span> {publisher}
-          </p>
-          <p className="py-2 text-gray-600">
-            <span className="font-bold text-black">Year of Publishing:</span>{" "}
-            {yearOfPublishing}
-          </p>
+          <h2 className="text-2xl font-bold">{bookName}</h2>
+          <p className="py-2">By : {author}</p>
+          <div className="flex gap-3 items-center">
+            <div>
+              <p className="">
+                <span className="pr-5 font-bold">Tag</span>
+                {tags.map((tag, index) => (
+                  <button
+                    key={index}
+                    className="btn btn-sm rounded-full px-6 border-none bg-green-50 mr-4 text-[#23BE0A]"
+                  >
+                    #{tag}
+                  </button>
+                ))}
+              </p>
+            </div>
+            <div className="flex gap-2">
+              <div>
+                <CiLocationOn className="text-lg font-bold" />
+              </div>
+              <div>
+                <p className=" text-gray-600">
+                  Year of Publishing: {yearOfPublishing}
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="flex items-center gap-3">
+            <div>
+              <p className=" text-gray-600">
+                <span className="font-bold text-black">Publisher:</span>{" "}
+                {publisher}
+              </p>
+            </div>
+            <div>
+              <p className=" text-gray-600">
+                <span className="font-bold text-black">Number of Pages:</span>{" "}
+                {totalPages}
+              </p>
+            </div>
+          </div>
+
           <div className="flex gap-4">
             <div>
               <p className="py-2 border-gray-200 border-b text-[#328EFF] bg-blue-100 px-4 rounded-full text-sm">
