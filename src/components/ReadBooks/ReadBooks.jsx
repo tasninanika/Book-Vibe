@@ -51,7 +51,7 @@ const ReadBooks = ({ book }) => {
               </div>
             </div>
           </div>
-          <div className="flex items-center gap-3 my-3">
+          <div className="flex items-center gap-4 py-3 border-b border-gray-200">
             <div className="flex items-center gap-2">
               <div>
                 <GoPeople />
@@ -70,7 +70,7 @@ const ReadBooks = ({ book }) => {
             </div>
           </div>
 
-          <div className="flex gap-4">
+          <div className="flex gap-4 mt-2">
             <div>
               <p className="py-2 border-gray-200 border-b text-[#328EFF] bg-blue-100 px-4 rounded-full text-sm">
                 Category: {category}
