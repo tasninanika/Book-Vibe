@@ -21,6 +21,22 @@ const ListedBooks = () => {
   return (
     <div>
       <h2>Listed Books</h2>
+      <div className="dropdown dropdown-center">
+        <div tabIndex={0} role="button" className="btn m-1">
+          Sort By ⬇
+        </div>
+        <ul
+          tabIndex={0}
+          className="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm"
+        >
+          <li>
+            <a>Rating</a>
+          </li>
+          <li>
+            <a>Number of pages</a>
+          </li>
+        </ul>
+      </div>
       <Tabs>
         <TabList>
           <Tab>Read Books</Tab>
