@@ -1,3 +1,5 @@
+import { toast } from "react-toastify";
+
 const getStoredReadList = () =>{
     const storedListStr = localStorage.getItem('read-list');
     if(storedListStr){
@@ -9,7 +11,7 @@ const getStoredReadList = () =>{
     }
 };
 
-const addToStoredReadList = (id, toast) =>{
+const addToStoredReadList = (id) =>{
     const storedList = getStoredReadList();
     if(storedList.includes(id)){
         console.log(id);
