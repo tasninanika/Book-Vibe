@@ -36,7 +36,7 @@ const ListedBooks = () => {
   };
 
   return (
-    <div>
+    <div className="mb-24">
       <h2 className="text-5xl text-center mt-10 mb-14 font-bold bg-gray-100 py-6">
         Books
       </h2>
