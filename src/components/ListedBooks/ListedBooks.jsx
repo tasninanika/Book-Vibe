@@ -22,12 +22,13 @@ const ListedBooks = () => {
   const handleSort = (sortType) => {
     setSort(sortType);
 
-    // 
-    if(sortType === 'No of pages'){
-      const storedReadList =[...readList].sort((a,b) => a.totalpages - b.totalpages);
-
+    //
+    if (sortType === "No of pages") {
+      const sortedReadList = [...readList].sort(
+        (a, b) => a.totalpages - b.totalpages
+      );
+      setReadList(sortedReadList);
     }
-
   };
 
   return (
@@ -35,16 +36,16 @@ const ListedBooks = () => {
       <h2>Listed Books</h2>
       <div className="dropdown dropdown-center">
         <div tabIndex={0} role="button" className="btn m-1">
-          {sort ? `Sort by: ${sort}` { sort } : "Sort By"}
+          {sort ? `Sort by: ${sort}` : "Sort By"}
         </div>
         <ul
           tabIndex={0}
           className="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm"
         >
-          <li onClick={()=> handleSort('Ratings')}>
+          <li onClick={() => handleSort("Ratings")}>
             <a>Rating</a>
           </li>
-          <li onClick={()=> handleSort('No of pages')}>
+          <li onClick={() => handleSort("No of pages")}>
             <a>Number of pages</a>
           </li>
         </ul>
