@@ -6,7 +6,6 @@ import { getStoredReadList } from "../../utility/addToDb";
 import ReadBooks from "../ReadBooks/ReadBooks";
 import WishlistBooks from "../WishlistBooks/WishlistBooks";
 import { getStoredWishList } from "../../utility/addToWishlist";
-import Dashboard from "../Dashboard/Dashboard";
 
 const ListedBooks = () => {
   const [readList, setReadList] = useState([]);
@@ -115,7 +114,6 @@ const ListedBooks = () => {
           ))}{" "}
         </TabPanel>
       </Tabs>
-      {readList.length > 0 && <Dashboard books={readList} />}
     </div>
   );
 };
