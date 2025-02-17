@@ -6,12 +6,9 @@ const ReadBooks = ({ book }) => {
   return (
     <Link to={`/books/${bookId}`}>
       <div className="h-full">
-        <div className="card card-side bg-base-100 shadow-sm">
-          <figure>
-            <img
-              src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp"
-              alt="Movie"
-            />
+        <div className="card card-side border-gray-200 border-2 my-6 rounded-2xl">
+          <figure className="w-[230px] m-6 p-8 bg-base-200 rounded-2xl">
+            <img src={image} alt="Movie" className="w-[130px] h-[180px]" />
           </figure>
           <div className="card-body">
             <h2 className="card-title">New movie is released!</h2>
