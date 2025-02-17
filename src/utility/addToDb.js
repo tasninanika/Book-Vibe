@@ -9,7 +9,7 @@ const getStoredReadList = () =>{
     }
 };
 
-const addToStoredReadList = (id) =>{
+const addToStoredReadList = (id, toast) =>{
     const storedList = getStoredReadList();
     if(storedList.includes(id)){
         console.log(id);
@@ -18,6 +18,8 @@ const addToStoredReadList = (id) =>{
         storedList.push(id);
         const storedListStr = JSON.stringify(storedList);
         localStorage.setItem('read-list', storedListStr);
+        // ideally trigger toast from the component
+        toast('This book is added to your read list.');
     }
 };
 
