@@ -23,6 +23,11 @@ const ListedBooks = () => {
     setSort(sortType);
 
     // 
+    if(sortType === 'No of pages'){
+      const storedReadList =[...readList].sort((a,b) => a.totalpages - b.totalpages);
+
+    }
+
   };
 
   return (
