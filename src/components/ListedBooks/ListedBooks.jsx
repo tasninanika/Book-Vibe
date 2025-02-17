@@ -37,22 +37,30 @@ const ListedBooks = () => {
 
   return (
     <div>
-      <h2>Listed Books</h2>
-      <div className="dropdown dropdown-center">
-        <div tabIndex={0} role="button" className="btn m-1">
-          {sort ? `Sort by: ${sort}` : "Sort By"}
+      <h2 className="text-5xl text-center mt-10 mb-14 font-bold bg-gray-100 py-6">
+        Books
+      </h2>
+      <div className="flex justify-center mb-14">
+        <div className="dropdown dropdown-center">
+          <div
+            tabIndex={0}
+            role="button"
+            className="btn m-1 bg-green-500 text-white"
+          >
+            {sort ? `Sort by: ${sort}` : "Sort By ⬇"}
+          </div>
+          <ul
+            tabIndex={0}
+            className="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm"
+          >
+            <li onClick={() => handleSort("Ratings")}>
+              <a>Rating</a>
+            </li>
+            <li onClick={() => handleSort("No of pages")}>
+              <a>Number of pages</a>
+            </li>
+          </ul>
         </div>
-        <ul
-          tabIndex={0}
-          className="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm"
-        >
-          <li onClick={() => handleSort("Ratings")}>
-            <a>Rating</a>
-          </li>
-          <li onClick={() => handleSort("No of pages")}>
-            <a>Number of pages</a>
-          </li>
-        </ul>
       </div>
       <Tabs>
         <TabList>
@@ -61,7 +69,6 @@ const ListedBooks = () => {
         </TabList>
 
         <TabPanel>
-          <h2>{readList.length}</h2>
           {readList.map((book) => (
             <Book key={book.bookId} book={book}></Book>
           ))}
