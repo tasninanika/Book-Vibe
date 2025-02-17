@@ -1,6 +1,8 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import { CiLocationOn } from "react-icons/ci";
+import { PiBookThin } from "react-icons/pi";
+import { GoPeople } from "react-icons/go";
 
 const ReadBooks = ({ book }) => {
   const {
@@ -50,11 +52,21 @@ const ReadBooks = ({ book }) => {
             </div>
           </div>
           <div className="flex items-center gap-3 my-3">
-            <div>
-              <p className=" text-gray-600">Publisher: {publisher}</p>
+            <div className="flex items-center gap-2">
+              <div>
+                <GoPeople />
+              </div>
+              <div>
+                <p className=" text-gray-600">Publisher: {publisher}</p>
+              </div>
             </div>
-            <div>
-              <p className=" text-gray-600">Number of Page: {totalPages}</p>
+            <div className="flex items-center gap-2">
+              <div>
+                <PiBookThin />
+              </div>
+              <div>
+                <p className=" text-gray-600">Number of Page: {totalPages}</p>
+              </div>
             </div>
           </div>
 
