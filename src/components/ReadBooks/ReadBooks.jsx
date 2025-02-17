@@ -47,20 +47,20 @@ const ReadBooks = ({ book }) => {
             <span className="font-bold text-black">Year of Publishing:</span>{" "}
             {yearOfPublishing}
           </p>
-          <div className="flex">
+          <div className="flex gap-4">
             <div>
               <p className="py-2 border-gray-200 border-b text-[#328EFF] bg-blue-100 px-4 rounded-full text-sm">
                 Category: {category}
               </p>
             </div>
             <div>
-              <p className="py-2 bg-yellow-50 text-yellow-500 px-4 rounded-full">
+              <p className="py-2 bg-orange-100 text-yellow-500 px-4 rounded-full">
                 Rating: {rating}
               </p>
             </div>
             <div>
               <Link to={`/books/${bookId}`}>
-                <button className="btn bg-red-400 text-white">
+                <button className="btn bg-green-500 text-white rounded-full">
                   View Details
                 </button>
               </Link>
