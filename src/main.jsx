@@ -9,6 +9,7 @@ import Dashboard from "./components/Dashboard/Dashboard";
 import BookDetail from "./components/BookDetail/BookDetail";
 import ListedBooks from "./components/ListedBooks/ListedBooks";
 import { ToastContainer } from "react-toastify";
+import ReadListContext from "./Context/ReadListContext";
 
 const router = createBrowserRouter([
   {
@@ -32,7 +33,11 @@ const router = createBrowserRouter([
       },
       {
         path: "dashboard",
-        element: <Dashboard></Dashboard>,
+        element: (
+          <ReadListContext>
+            <Dashboard></Dashboard>
+          </ReadListContext>
+        ),
       },
     ],
   },

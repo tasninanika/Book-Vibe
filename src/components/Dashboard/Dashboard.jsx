@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid } from "recharts";
-import { ReadListContext } from "../ListedBooks/ListedBooks";
+import { ReadList } from "../../Context/ReadListContext";
 
 const getPath = (x, y, width, height) => {
   return `M${x},${y + height}C${x + width / 3},${y + height} ${x + width / 2},${
@@ -19,11 +19,12 @@ const TriangleBar = (props) => {
 };
 
 const Dashboard = () => {
-  const books = useContext(ReadListContext);
+  const books = useContext(ReadList);
+  console.log(books.Temp);
 
   return (
     <div className="flex justify-center my-10">
-      <BarChart
+      {/* <BarChart
         width={600}
         height={350}
         data={books}
@@ -42,7 +43,7 @@ const Dashboard = () => {
             <Cell key={`cell-${index}`} fill="green" />
           ))}
         </Bar>
-      </BarChart>
+      </BarChart> */}
     </div>
   );
 };
