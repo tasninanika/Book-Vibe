@@ -25,8 +25,12 @@ const ListedBooks = () => {
     //
     if (sortType === "No of pages") {
       const sortedReadList = [...readList].sort(
-        (a, b) => a.totalpages - b.totalpages
+        (a, b) => a.totalPages - b.totalPages
       );
+      setReadList(sortedReadList);
+    }
+    if (sortType === "Ratings") {
+      const sortedReadList = [...readList].sort((a, b) => a.rating - b.rating);
       setReadList(sortedReadList);
     }
   };
