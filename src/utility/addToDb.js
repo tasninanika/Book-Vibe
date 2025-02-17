@@ -4,7 +4,8 @@ const getStoredReadList = () =>{
     const storedListStr = localStorage.getItem('read-list');
     if(storedListStr){
         const storedList = JSON.parse(storedListStr);
-        return storedList;
+        toast('This book is already added');
+        return storedList;     
     }
     else{
         return [];
