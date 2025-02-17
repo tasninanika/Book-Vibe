@@ -14,7 +14,7 @@ const getStoredWishList = () =>{
 const addToStoredWishList = (id) =>{
     const storedList = getStoredWishList();
     if(storedList.includes(id)){
-        console.log(id);
+        toast('This book is already in your wishlist.')
     }
     else{
         storedList.push(id);

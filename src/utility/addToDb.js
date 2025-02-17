@@ -14,8 +14,7 @@ const getStoredReadList = () =>{
 const addToStoredReadList = (id) =>{
     const storedList = getStoredReadList();
     if(storedList.includes(id)){
-        console.log(id);
-    }
+        toast('This book is already in your read list.')    }
     else{
         storedList.push(id);
         const storedListStr = JSON.stringify(storedList);
