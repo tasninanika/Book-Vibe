@@ -19,7 +19,7 @@ const ReadBooks = ({ book }) => {
   } = book;
   return (
     <div className="h-full">
-      <div className="card card-side border-gray-200 border-2 my-6 rounded-2xl">
+      <div className="card card-side border-gray-200 border my-6 rounded-2xl">
         <figure className="w-[230px] m-6 p-8 bg-base-200 rounded-2xl">
           <img src={image} alt="Movie" className="w-[130px] h-[180px]" />
         </figure>
@@ -51,13 +51,13 @@ const ReadBooks = ({ book }) => {
               </div>
             </div>
           </div>
-          <div className="flex items-center gap-4 py-3 border-b border-gray-200">
+          <div className="flex items-center gap-6 py-3 border-b border-gray-200 text-gray-500">
             <div className="flex items-center gap-2">
               <div>
                 <GoPeople />
               </div>
               <div>
-                <p className=" text-gray-600">Publisher: {publisher}</p>
+                <p>Publisher: {publisher}</p>
               </div>
             </div>
             <div className="flex items-center gap-2">
@@ -65,7 +65,7 @@ const ReadBooks = ({ book }) => {
                 <PiBookThin />
               </div>
               <div>
-                <p className=" text-gray-600">Number of Page: {totalPages}</p>
+                <p>Number of Page: {totalPages}</p>
               </div>
             </div>
           </div>
