@@ -1,29 +1,38 @@
 import PropTypes from "prop-types";
-import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid } from "recharts";
+import {
+  BarChart,
+  Bar,
+  Cell,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  Legend,
+} from "recharts";
 
 const colors = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042", "red", "pink"];
+
 const getPath = (x, y, width, height) => {
   return `M${x},${y + height}C${x + width / 3},${y + height} ${x + width / 2},${
     y + height / 3
   }
-  ${x + width / 2}, ${y}
+  ${x + width / 2},${y}
   C${x + width / 2},${y + height / 3} ${x + (2 * width) / 3},${y + height} ${
     x + width
-  }, ${y + height}
-  Z`;
+  },${y + height}Z`;
 };
 
 const TriangleBar = (props) => {
   const { fill, x, y, width, height } = props;
-
   return <path d={getPath(x, y, width, height)} stroke="none" fill={fill} />;
 };
+
 const Dashboard = ({ books }) => {
   return (
-    <div>
+    <div className="flex justify-center my-10">
       <BarChart
-        width={500}
-        height={300}
+        width={600}
+        height={350}
         data={books}
         margin={{
           top: 20,
@@ -35,13 +44,15 @@ const Dashboard = ({ books }) => {
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis dataKey="bookName" />
         <YAxis />
+        <Tooltip />
+        <Legend />
         <Bar
           dataKey="totalPages"
           fill="#8884d8"
           shape={<TriangleBar />}
           label={{ position: "top" }}
         >
-          {books.map((book, index) => (
+          {books.map((entry, index) => (
             <Cell key={`cell-${index}`} fill={colors[index % 20]} />
           ))}
         </Bar>
@@ -51,7 +62,7 @@ const Dashboard = ({ books }) => {
 };
 
 Dashboard.propTypes = {
-  books: PropTypes.object.isRequired,
+  books: PropTypes.array,
 };
 
 export default Dashboard;
