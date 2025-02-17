@@ -49,18 +49,12 @@ const ReadBooks = ({ book }) => {
               </div>
             </div>
           </div>
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-3 my-3">
             <div>
-              <p className=" text-gray-600">
-                <span className="font-bold text-black">Publisher:</span>{" "}
-                {publisher}
-              </p>
+              <p className=" text-gray-600">Publisher: {publisher}</p>
             </div>
             <div>
-              <p className=" text-gray-600">
-                <span className="font-bold text-black">Number of Pages:</span>{" "}
-                {totalPages}
-              </p>
+              <p className=" text-gray-600">Number of Page: {totalPages}</p>
             </div>
           </div>
 
