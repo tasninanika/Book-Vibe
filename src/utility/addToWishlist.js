@@ -1,5 +1,5 @@
 const getStoredWishList = () =>{
-    const storedListStr = localStorage.getItem('read-list');
+    const storedListStr = localStorage.getItem('wish-list');
     if(storedListStr){
         const storedList = JSON.parse(storedListStr);
         return storedList;
@@ -17,7 +17,7 @@ const addToStoredWishList = (id) =>{
     else{
         storedList.push(id);
         const storedListStr = JSON.stringify(storedList);
-        localStorage.setItem('read-list', storedListStr);
+        localStorage.setItem('wish-list', storedListStr);
     }
 };
 

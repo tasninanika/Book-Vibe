@@ -12,6 +12,7 @@ const ListedBooks = () => {
   const [wishList, setWishList] = useState([]);
   const [sort, setSort] = useState("");
   const allBooks = useLoaderData();
+  const allWishListBooks = useLoaderData();
 
   useEffect(() => {
     const storedReadList = getStoredReadList();
@@ -24,11 +25,11 @@ const ListedBooks = () => {
   useEffect(() => {
     const storedWishList = getStoredWishList();
     const storedWishListInt = storedWishList.map((id) => parseInt(id));
-    const wishBookList = allBooks.filter((book) =>
+    const wishBookList = allWishListBooks.filter((book) =>
       storedWishListInt.includes(book.bookId)
     );
     setWishList(wishBookList);
-  }, [allBooks]);
+  }, [allWishListBooks]);
 
   const handleSort = (sortType) => {
     setSort(sortType);
