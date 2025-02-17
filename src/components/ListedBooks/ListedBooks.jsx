@@ -28,7 +28,7 @@ const ListedBooks = () => {
       <h2>Listed Books</h2>
       <div className="dropdown dropdown-center">
         <div tabIndex={0} role="button" className="btn m-1">
-          {sort ? { sort } : "Sort By ⬇"}
+          {sort ? `Sort by: ${sort}` { sort } : "Sort By"}
         </div>
         <ul
           tabIndex={0}
