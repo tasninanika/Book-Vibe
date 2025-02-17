@@ -30,7 +30,7 @@ const ListedBooks = () => {
       setReadList(sortedReadList);
     }
     if (sortType === "Ratings") {
-      const sortedReadList = [...readList].sort((a, b) => a.rating - b.rating);
+      const sortedReadList = [...readList].sort((a, b) => b.rating - a.rating);
       setReadList(sortedReadList);
     }
   };
