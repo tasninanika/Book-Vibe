@@ -21,6 +21,8 @@ const ListedBooks = () => {
 
   const handleSort = (sortType) => {
     setSort(sortType);
+
+    // 
   };
 
   return (
