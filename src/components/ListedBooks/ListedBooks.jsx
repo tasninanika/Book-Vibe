@@ -76,12 +76,8 @@ const ListedBooks = () => {
       </div>
       <Tabs>
         <TabList>
-          <Tab className={({ isActive }) => (isActive ? "active-navlink" : "")}>
-            Read Books
-          </Tab>
-          <Tab className={({ isActive }) => (isActive ? "active-navlink" : "")}>
-            Wishlist Books
-          </Tab>
+          <Tab>Read Books</Tab>
+          <Tab>Wishlist Books</Tab>
         </TabList>
 
         <TabPanel>
