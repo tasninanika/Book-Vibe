@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { useContext } from "react";
 import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid } from "recharts";
 import { ReadListContext } from "../../Context/ReadListProvider";
@@ -49,6 +50,14 @@ const Dashboard = () => {
       </BarChart>
     </div>
   );
+};
+
+TriangleBar.propTypes = {
+  fill: PropTypes.string.isRequired,
+  x: PropTypes.number.isRequired,
+  y: PropTypes.number.isRequired,
+  width: PropTypes.number.isRequired,
+  height: PropTypes.number.isRequired,
 };
 
 export default Dashboard;

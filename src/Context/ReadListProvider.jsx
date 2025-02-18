@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { createContext, useEffect, useState } from "react";
 import { getStoredReadList } from "../utility/addToDb";
 import { useLoaderData } from "react-router-dom";
@@ -22,6 +23,10 @@ const ReadListProvider = ({ children }) => {
       {children}
     </ReadListContext.Provider>
   );
+};
+
+ReadListProvider.propTypes = {
+  children: PropTypes.any,
 };
 
 export default ReadListProvider;
