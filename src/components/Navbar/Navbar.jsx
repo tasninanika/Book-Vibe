@@ -13,10 +13,20 @@ const Navbar = () => {
         </NavLink>
       </li>
       <li className="text-lg text-gray-600">
-        <NavLink to="/listedBooks">Listed Books</NavLink>
+        <NavLink
+          to="/listedBooks"
+          className={({ isActive }) => (isActive ? "active-navlink" : "")}
+        >
+          Listed Books
+        </NavLink>
       </li>
       <li className="text-lg text-gray-600">
-        <NavLink to="/dashboard">Pages to Read</NavLink>
+        <NavLink
+          to="/dashboard"
+          className={({ isActive }) => (isActive ? "active-navlink" : "")}
+        >
+          Pages to Read
+        </NavLink>
       </li>
     </>
   );
