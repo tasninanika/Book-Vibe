@@ -3,6 +3,8 @@ import { useContext } from "react";
 import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid } from "recharts";
 import { ReadListContext } from "../../Context/ReadListProvider";
 
+const colors = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042", "red", "pink"];
+
 const getPath = (x, y, width, height) => {
   return `M${x},${y + height}C${x + width / 3},${y + height} ${x + width / 2},${
     y + height / 3
@@ -27,7 +29,7 @@ const Dashboard = () => {
   }
 
   return (
-    <div className="flex justify-center my-10">
+    <div className="flex justify-center my-20">
       <BarChart
         width={600}
         height={350}
@@ -44,7 +46,7 @@ const Dashboard = () => {
           label={{ position: "top" }}
         >
           {readList.map((entry, index) => (
-            <Cell key={`cell-${index}`} fill="green" />
+            <Cell key={`cell-${index}`} fill={colors[index % colors.length]} />
           ))}
         </Bar>
       </BarChart>
