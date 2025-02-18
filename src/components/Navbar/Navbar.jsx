@@ -1,10 +1,16 @@
 import { NavLink } from "react-router-dom";
+import "./Navbar.css";
 
 const Navbar = () => {
   const links = (
     <>
-      <li className="text-lg text-gray-600">
-        <NavLink to="/">Home</NavLink>
+      <li className="text-base text-gray-600">
+        <NavLink
+          to="/"
+          className={({ isActive }) => (isActive ? "active-navlink" : "")}
+        >
+          Home
+        </NavLink>
       </li>
       <li className="text-lg text-gray-600">
         <NavLink to="/listedBooks">Listed Books</NavLink>

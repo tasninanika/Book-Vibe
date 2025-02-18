@@ -1,0 +1,13 @@
+
+.active-navlink {
+    background-color: transparent; 
+    color: #48bb78;
+    border: 2px solid #48bb78; 
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  
+  
+  
