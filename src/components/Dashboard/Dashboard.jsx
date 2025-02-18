@@ -29,10 +29,10 @@ const Dashboard = () => {
   }
 
   return (
-    <div className="flex justify-center my-20">
+    <div className="flex justify-center my-20 py-20 bg-gray-50 rounded-xl">
       <BarChart
-        width={600}
-        height={350}
+        width={700}
+        height={450}
         data={readList}
         margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
       >
