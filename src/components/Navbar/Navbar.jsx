@@ -12,7 +12,7 @@ const Navbar = () => {
           Home
         </NavLink>
       </li>
-      <li className="text-lg text-gray-600">
+      <li className="text-base text-gray-600">
         <NavLink
           to="/listedBooks"
           className={({ isActive }) => (isActive ? "active-navlink" : "")}
@@ -20,7 +20,7 @@ const Navbar = () => {
           Listed Books
         </NavLink>
       </li>
-      <li className="text-lg text-gray-600">
+      <li className="text-base text-gray-600">
         <NavLink
           to="/dashboard"
           className={({ isActive }) => (isActive ? "active-navlink" : "")}
