@@ -38,6 +38,7 @@ const router = createBrowserRouter([
             <Dashboard></Dashboard>
           </ReadListProvider>
         ),
+        loader: () => fetch("/booksData.json"),
       },
     ],
   },
